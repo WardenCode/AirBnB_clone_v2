@@ -34,7 +34,7 @@ def python_is_cool(text='is cool'):
     Display Python followed by text.
     text by default is 'is cool'
     """
-    return ('Python {:s}'.format(escape(texy)).replace('_', ' '))
+    return ('Python {:s}'.format(escape(text)).replace('_', ' '))
 
 
 @app.route("/number/<int:n>", strict_slashes=False)

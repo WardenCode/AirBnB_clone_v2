@@ -32,7 +32,7 @@ def states(id=''):
                             exist=exist, id=escaped_id))
 
 
-@app.teardown_appcontext()
+@app.teardown_appcontext
 def close_session(self):
     """Remove the current SQLAlchemy Session"""
     storage.close()

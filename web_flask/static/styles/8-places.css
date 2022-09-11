@@ -1,3 +1,11 @@
+.places {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin: 45px auto;
+	text-align: center;
+}
+
 .places h1, .places h2 {
 	font-size: 30px;
 }

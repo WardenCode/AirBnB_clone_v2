@@ -49,10 +49,8 @@
 				<h1>Places</h1>
 				{% for place in places %}
 				<article>
-					<div class="headline">
-						<h2>{{ place.name }}</h2>
-						<div class="price_by_night">${{ place.price_by_night }}</div>
-					</div>
+					<h2>{{ place.name }}</h2>
+					<div class="price_by_night">${{ place.price_by_night }}</div>
 					<div class="information">
 						<div class="max_guest">
 							<span></span>
@@ -68,7 +66,7 @@
 						</div>
 					</div>
 					<div class="user"><b>Owner</b>: {{ users['User.' + place.user_id].first_name + ' ' + users['User.' + place.user_id].last_name}}</div>
-					<div class="description">{{ place.description }}</div>
+					<div class="description">{{ place.description|safe }}</div>
 				</article>
 				{% endfor %}
 			</section>

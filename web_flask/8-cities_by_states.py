@@ -14,7 +14,7 @@ def cities_by_states():
     return (render_template('/8-cities_by_states.html', states=values))
 
 
-@app.teardown_appcontext()
+@app.teardown_appcontext
 def close_session(self):
     """Remove the current SQLAlchemy Session"""
     storage.close()

@@ -22,7 +22,7 @@ def hbnb_filters():
                             states=states))
 
 
-@app.teardown_appcontext()
+@app.teardown_appcontext
 def close_session(self):
     """Remove the current SQLAlchemy Session"""
     storage.close()

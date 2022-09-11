@@ -19,13 +19,13 @@ def hbnb():
     amenities = list(storage.all(Amenity).values())
     states = list(storage.all(State).values())
     places = list(storage.all(Place).values())
-    users = list(storage.all(User))
+    users = storage.all(User)
 
     return (render_template('/100-hbnb.html', amenities=amenities,
                             states=states, places=places, users=users))
 
 
-@app.teardown_appcontext()
+@app.teardown_appcontext
 def close_session(self):
     """Remove the current SQLAlchemy Session"""
     storage.close()
