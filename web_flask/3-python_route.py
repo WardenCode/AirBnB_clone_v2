@@ -15,13 +15,13 @@ def hello_world():
 @app.route("/hbnb", strict_slashes=False)
 def main():
     """Display HBNB!"""
-    return ('HBNB!')
+    return ('HBNB')
 
 
 @app.route("/c/<string:text>", strict_slashes=False)
 def c_is_fun(text):
     """Display C followed by text"""
-    return (f'C {escape(text):s}'.replace('_', ' '))
+    return ('C {:s}'.format(escape(text)).replace('_', ' '))
 
 
 @app.route("/python", strict_slashes=False)
@@ -31,7 +31,7 @@ def python_is_cool(text='is cool'):
     Display Python followed by text.
     text by default is 'is cool'
     """
-    return (f'Python {escape(text):s}'.replace('_', ' '))
+    return ('Python {:s}'.format(escape(text)).replace('_', ' '))
 
 
 if (__name__ == '__main__'):
