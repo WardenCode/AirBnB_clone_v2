@@ -15,7 +15,7 @@ def hello_world():
 @app.route("/hbnb", strict_slashes=False)
 def main():
     """Display HBNB!"""
-    return ('HBNB!')
+    return ('HBNB')
 
 
 @app.route("/c/<string:text>", strict_slashes=False)
