@@ -43,6 +43,7 @@
 						{% endfor %}
 					</ul>
 				</div>
+
 			</section>
 			<section class="places">
 				<h1>Places</h1>
@@ -54,19 +55,19 @@
 					</div>
 					<div class="information">
 						<div class="max_guest">
-							<div class="guest_icon"></div>
+							<span></span>
 							<p>{{ place.max_guest }} Guests</p>
 						</div>
 						<div class="number_rooms">
-							<div class="bed_icon"></div>
+							<span></span>
 							<p>{{ place.number_rooms }} Bedroom</p>
 						</div>
 						 <div class="number_bathrooms">
-							<div class="bath_icon"></div>
+							<span></span>
 							<p>{{ place.number_bathrooms }} Bathroom</p>
 						</div>
 					</div>
-					<div class="user"><b>Owner</b>: {{ users['User.' + place.user_id] }}</div>
+					<div class="user"><b>Owner</b>: {{ users['User.' + place.user_id].first_name + ' ' + users['User.' + place.user_id].last_name}}</div>
 					<div class="description">{{ place.description }}</div>
 				</article>
 				{% endfor %}
