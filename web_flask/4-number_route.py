@@ -37,7 +37,7 @@ def python_is_cool(text='is cool'):
 @app.route("/number/<int:n>", strict_slashes=False)
 def is_a_number(n):
     """Display the int passed by the URL"""
-    return ('{:d} is a number'.format(escape(n)))
+    return ('{} is a number'.format(escape(n)))
 
 
 if (__name__ == '__main__'):
