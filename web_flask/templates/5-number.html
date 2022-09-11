@@ -4,6 +4,6 @@
         <title>HBNB</title>
     </head>
     <body>
-        {% if num is number %}<h1>Number: {{ num }}</h1>{% endif %}
+        {% if num|int != 0 %}<h1>Number: {{ num }}</h1>{% endif %}
     </body>
 </html>
